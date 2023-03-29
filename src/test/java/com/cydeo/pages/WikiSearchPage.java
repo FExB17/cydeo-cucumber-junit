@@ -1,0 +1,28 @@
+package com.cydeo.pages;
+
+import com.cydeo.step_definitions.Wiki_StepDefinitions;
+import com.cydeo.utilities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class WikiSearchPage {
+
+  public WikiSearchPage() {
+      PageFactory.initElements(Driver.getDriver(), this);
+  }
+
+  @FindBy(id = "searchInput")
+    public WebElement searchBox;
+
+  @FindBy (xpath = "//button[@type='submit']")
+    public WebElement searchSubmitButton;
+
+  @FindBy (id = "firstHeading")
+  public WebElement mainHeader;
+
+@FindBy (xpath = "//th[@class='infobox-above']")
+  public WebElement imageHeader;
+
+
+}
